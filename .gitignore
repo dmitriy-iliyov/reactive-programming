@@ -52,3 +52,5 @@ Thumbs.db
 # Optional yarn cache directory
 .yarn
 .pnp.*
+
+.angular/
