@@ -1,0 +1,44 @@
+<style>
+    hr {
+        border: 1px solid gray;
+    }
+</style>
+
+<div>
+    <p> Interpolation </p>
+    <p>Ім'я: {{name}}</p>
+    <p>Вік: {{age}}</p>
+</div>
+<hr>
+
+<div>
+    <p>Binding to property HTML elements</p>
+    <input type="text" [value]="name" />
+    <input type="text" [value]="age" />
+</div>
+<hr>
+
+<div>
+    <p>Binding to an attribute</p>
+    <table border="1">
+        <tr><td [attr.colspan]="colspan">One-Two</td></tr>
+        <tr><td>Three</td><td>Four</td></tr>
+        <tr><td>Five</td><td>Six</td></tr>
+    </table>
+</div>
+<hr>
+
+<div>
+    <p>Binding to the bottom</p>
+    <p>Кількість кліків {{count}}</p>
+    <button (click)="increase()">Click</button>
+</div>
+<hr>
+
+<div>
+    <p>Two way binding</p>
+    <p>Привіт {{name}}</p>
+    <input type="text" [(ngModel)]="name" />
+    <br><br>
+    <input type="text" [(ngModel)]="name" />
+</div>

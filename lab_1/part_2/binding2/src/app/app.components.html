@@ -1,0 +1,30 @@
+<style>
+    hr {
+        border: 1px solid gray;
+    }
+
+    div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #ccc;
+    }
+
+    .isredbox {
+        background-color: red;
+    }
+
+    .isbluebox {
+        background-color: blue;
+    }
+</style>
+
+<p>Binding to CSS class</p>
+<div [class.isredbox]="isRed"></div>
+<div [class.isredbox]="!isRed"></div>
+<input type="checkbox" [(ngModel)]="isRed" />
+<div [class]="blue"></div>
+<hr>
+<p>Style binding</p>
+<div [style.background-color]="isYellow ? 'yellow' : 'blue'"></div>
+<div [style.background-color]="!isYellow ? 'yellow' : 'blue'"></div>
+<input type="checkbox" [(ngModel)] = "isYellow"/>
