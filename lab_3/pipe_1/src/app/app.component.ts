@@ -3,11 +3,13 @@ import { Component} from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `<child-comp [name]="name"></child-comp>
-    <input type="text" [(ngModel)]="name" />`
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.css']
 })
 
 
-export class AppComponent{
-    name:string="Tom";
+export class AppComponent {
+    myDate = new Date(1961, 3, 12);
+    welcome: string = "Hello World!";
+    percentage: number = 0.14;
 }
