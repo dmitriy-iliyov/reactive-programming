@@ -1,0 +1,6 @@
+<p>Вправа 7</p>
+<child-component-1 [userName]="name" [userAge]="age"></child-component-1>
+<input type="text" [(ngModel)]="name" />
+<p>Вправа 8</p>
+<h2>Кількість кліків: {{clicks}}</h2>
+<child-component-2 (onChanged)="onChanged($event)"></child-component-2>
