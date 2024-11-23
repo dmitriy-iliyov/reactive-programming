@@ -54,3 +54,4 @@ Thumbs.db
 .pnp.*
 
 .angular/
+.idea/*
