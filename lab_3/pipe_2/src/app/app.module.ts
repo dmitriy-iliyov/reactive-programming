@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {FormatPipe} from "./format.pipes";
 import {JoinPipe} from "./join.pipe";
-import {SquarePipe} from "./square.pipe";
+import {DatePipe} from "@angular/common";
 
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, FormsModule],
-    declarations: [AppComponent, FormatPipe, JoinPipe, SquarePipe],
+    imports: [BrowserModule, FormsModule, DatePipe],
+    declarations: [AppComponent, FormatPipe, JoinPipe],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "projects": {
-    "pipe_2": {
+    "pipe_3": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -9,23 +9,27 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pipe_2",
+            "outputPath": "dist/pipe_3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.json",
-            "aot": true
+            "aot": true,
+            "assets": [
+              "src/assets"
+            ]
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pipe_2:build"
+            "browserTarget": "pipe_3:build"
           }
         }
       }
-    }},
-  "defaultProject": "pipe_2",
+    }
+  },
+  "defaultProject": "pipe_3",
   "cli": {
     "analytics": false
   }

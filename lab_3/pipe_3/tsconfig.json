@@ -18,7 +18,7 @@
         ]
     },
     "files": [
-        "../pipe_2/src/main.ts",
+        "../pipe_3/src/main.ts",
         "src/polyfills.ts"
     ],
     "include": [

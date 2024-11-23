@@ -1,33 +1,32 @@
-import {Component, Pipe} from '@angular/core';
-import {interval, map, Observable} from "rxjs";
+import { Component, OnInit} from '@angular/core';
+import { HttpService} from './http.service';
+import {Observable} from 'rxjs';
+import {User} from "./user.interface";
 
 
 @Component({
     selector: 'my-app',
     template: `
-        <input [(ngModel)]="num" name="fact">
-        <div>Результат: {{num | format}}</div>
-        <hr/>
-        <input #user name="user" class="form-control">
-        <button class="btn" (click)="users.push(user.value)">Add</button>
-        <p>{{users | join}}</p>
-        <p>Модель: {{ phone| async }}</p>
-        <button (click)="showPhones()">Подивитися моделі</button>
-    `
+        <ul>
+            <li *ngFor="let user of users | async">
+                <p>Ім’я користувача: {{user.name}}</p>
+                <p>Вік користувача: {{user.age}}</p>
+            </li>
+        </ul>
+    `,
+    providers: [HttpService]
 })
 
 
-export class AppComponent {
-    num: number = 15.45;
-    users = ["Tom", "Alice", "Sam", "Kate", "Bob"];
-    phones = ["iPhone 7", "LG G 5", "Honor 9", "Idol S4", "Nexus 6P"];
-    phone: Observable<string>|undefined;
+export class AppComponent implements OnInit {
+    users: Observable<User[]>|undefined;
 
-    constructor() {
-        this.showPhones();
-    }
+    constructor(private httpService: HttpService){}
 
-    showPhones() {
-        this.phone = interval(500).pipe(map((i:number)=> this.phones[i]));
+    ngOnInit(){
+        this.users = this.httpService.getUsers();
+        this.users.subscribe(users => {
+            console.log('Полученные пользователи:', users);
+        });
     }
 }
