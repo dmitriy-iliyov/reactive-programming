@@ -1,12 +1,12 @@
 {
-    "name": "pipe_1",
+    "name": "service3",
     "version": "1.0.0",
     "description": "Angular 16 Project",
     "author": "Dmitriy Iliov",
     "scripts": {
-        "ng": "../pipe_1/node_modules/.bin/ng",
-        "start": "../pipe_1/node_modules/.bin/ng serve",
-        "build": "../pipe_1/node_modules/.bin/ng build"
+        "ng": "../service3/node_modules/.bin/ng",
+        "start": "../service3/node_modules/.bin/ng serve",
+        "build": "../service3/node_modules/.bin/ng build"
     },
     "dependencies": {
         "@angular/common": "~16.0.0",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "projects": {
-    "pipe_1": {
+    "service3": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -9,7 +9,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pipe_1",
+            "outputPath": "dist/service3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -20,12 +20,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pipe_1:build"
+            "browserTarget": "service3:build"
           }
         }
       }
     }},
-  "defaultProject": "pipe_1",
+  "defaultProject": "service3",
   "cli": {
     "analytics": false
   }
