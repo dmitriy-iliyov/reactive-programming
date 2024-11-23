@@ -13,3 +13,6 @@ lab_3:
 lab_4:  
   - part_2: https://iliovio12laba4-2.web.app/  
   - part_3: https://iliovio12laba4-3.web.app/  
+
+lab_5:
+  - part_1: https://iliovio12laba5-1.web.app/
